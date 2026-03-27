@@ -1,0 +1,47 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Mechanistic Nonlinear Dynamical Modeling for Parameter
+  Estimation: S.cerevisiae
+message: Shinzou wo Sasageyo!
+type: software
+authors:
+  - given-names: Paul A.
+    family-names: Valle
+    email: paul.valle@tectijuana.edu.mx
+    affiliation: TecNM - IT Tijuana
+    orcid: 'https://orcid.org/0000-0001-6567-1065'
+  - given-names: Yolocuauhtli
+    family-names: Salazar
+    email: ysalazar@itdurango.edu.mx
+    affiliation: TecNM - IT Durango
+    orcid: 'https://orcid.org/0000-0002-5563-2692'
+  - given-names: Luis N.
+    family-names: Coria
+    email: luis.coria@tectijuana.edu.mx
+    affiliation: TecNM - IT Tijuana
+    orcid: 'https://orcid.org/0000-0002-1219-0433'
+  - given-names: Ivan A.
+    family-names: Garcia
+    affiliation: TecNM - IT Tijuana
+    email: xxx@tectijuana.edu.mx
+  - given-names: Nicolas I.
+    family-names: Parra
+    email: xxx@tectijuana.edu.mx
+    affiliation: TecNM - IT Tijuana
+repository-code: >-
+  https://github.com/DrPaulValle/Mechanistic-Nonlinear-Dynamical-Modeling-for-Parameter-Estimation-S.-cerevisiae/
+keywords:
+  - Mechanistic Modelling
+  - Nonlinear System
+  - PINN
+  - Genetic Programming
+  - Nonlinear Regression
+  - Alcoholic Fermentation
+  - Saccharomyces cerevisiae
+  - Global Stability
+license: BSD-2-Clause
+version: '1.0'
+date-released: '2026-03-26'

@@ -925,7 +925,21 @@ def run_all_sheets(
         }
 
         # PINN predictions
-        t_plot, w_p, W_p, x_p, y_p, z_p = model.predict(t_data, extend_factor=2.0, dt=dt)
+        t_plot, w_p, W_p, x_p, y_p, z_p = model.predict(t_data, extend_factor=extend_factor, dt=dt)
+        
+        pred_csv_path = os.path.join(output_dir, f"{sheet_str}_PINN_prediction.csv")
+
+        df_pred = pd.DataFrame({
+            "t":  np.asarray(t_plot).ravel(),
+            "w":  np.asarray(w_p).ravel(),
+            "W":  np.asarray(W_p).ravel(),
+            "x":  np.asarray(x_p).ravel(),
+            "y":  np.asarray(y_p).ravel(),
+            "z":  np.asarray(z_p).ravel(),
+        })
+        df_pred.to_csv(pred_csv_path, index=False)
+        
+        print(f"Saved: {pred_csv_path}")
 
         # Euler simulation (extend to the same horizon as PINN)
         t_end = extend_factor * tmax
@@ -1022,7 +1036,7 @@ if __name__ == "__main__":
         verbose_every=10000,
         n_physics=600,
         W0_value=0.0,
-        dt=0.1,
+        dt=0.01,
         extend_factor=2.0,
         alpha=0.99,
         beta_ic=0.5,
